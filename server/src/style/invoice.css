@@ -1,0 +1,34 @@
+/* sale.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+tfoot {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+tfoot td {
+    border-top: 2px solid #e0e0e0;
+}

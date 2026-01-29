@@ -1,0 +1,145 @@
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+
+.sidebar {
+  box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+}
+.nav-item,
+.navbar {
+  z-index: 10000;
+  
+}
+@media  screen and (max-width:800px) {
+  .sidebar{
+    z-index: 10000000;
+  }
+}
+
+.e-dlg-center-center, .e-quick-popup-wrapper.e-device{
+  z-index: 1000000 !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/* SalesReport.css */
+.sales-report-container {
+    margin: 20px;
+}
+
+.sales-report-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sales-report-date {
+    font-size: 16px;
+}
+
+.sales-report-total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.print-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Print styles */
+@media print {
+    .print-button {
+        display: none;
+    }
+
+    .sales-report-container {
+        margin: 0;
+    }
+
+    .sales-report-header, .sales-report-total {
+        margin: 10px 0;
+    }
+
+    /* Add any other styles to ensure the print looks good */
+}
+
+
+/* color-picker style  */
+
+ #preview {
+  background: transparent
+    url('https://ej2.syncfusion.com/react/demos/src/color-picker/images/pen.png')
+    no-repeat;
+  display: inline-block;
+  height: 80px;
+  margin: 10px 0;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: #008000;
+}
+
+.e-input-group:not(.e-float-icon-left), .e-input-group.e-success:not(.e-float-icon-left), .e-input-group.e-warning:not(.e-float-icon-left), .e-input-group.e-error:not(.e-float-icon-left), .e-input-group.e-control-wrapper:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-success:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-warning:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left){
+  border: none;
+}
+.sidebar-title{
+  border-bottom: 1px solid  rgb(143, 135, 141);
+}
+.cart{
+  margin:10px;
+}
+.count p{
+   /* color:rgb(12, 221, 221); */
+    padding-top: 8px;
+    font-size: bold;
+    padding-left: 10px;
+}
+@media print {
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+
+  html, body {
+    width: 80mm;
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .thermal-print, .thermal-print * {
+    visibility: visible;
+  }
+
+  .thermal-print {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80mm;
+    font-family: monospace !important;
+    font-size: 16px !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  * {
+    overflow: visible !important;
+  }
+
+  .print-button {
+    display: none !important;
+  }
+}

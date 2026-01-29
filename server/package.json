@@ -1,0 +1,73 @@
+{
+    "name": "client",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "client app",
+    "main": "main.cjs",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "npm run build --prefix client",
+        "build:stats": "npm run build --stats --prefix client",
+        "electron": "electron .",
+        "dist": "npm run build && electron-builder",
+        "server": "nodemon server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "seed": "node seeder.js",
+        "eject": "react-scripts eject",
+        "analyze": "npm run build -- --stats && npx webpack-bundle-analyzer build/bundle-stats.json"
+    },
+    "author": "techinfoyt",
+    "license": "MIT",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.20.0",
+        "cloudinary": "^2.5.0",
+        "colors": "^1.4.0",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.18.1",
+        "firebase-admin": "^12.7.0",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^6.3.2",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.5-lts.1",
+        "node-cors": "^1.0.0",
+        "node-cron": "^3.0.3",
+        "nodemailer": "^7.0.13",
+        "redux-devtools-extension": "^2.13.9",
+        "socket.io": "^4.8.3",
+        "twilio": "^5.3.3"
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2",
+        "electron": "^35.1.5",
+        "electron-builder": "^24.6.0",
+        "electron-is-dev": "^2.0.0",
+        "nodemon": "^2.0.22",
+        "webpack-bundle-analyzer": "^4.10.2"
+    },
+    "build": {
+        "appId": "com.shahi.dewan",
+        "productName": "Shahi Dewan App",
+        "directories": {
+            "output": "dist"
+        },
+        "files": [
+            "main.cjs",
+            "server.js",
+            "client/build/**/*",
+            "server/**/*",
+            "package.json"
+        ],
+        "win": {
+            "target": "nsis",
+            "icon": "icon.ico"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true
+        }
+    }
+}
